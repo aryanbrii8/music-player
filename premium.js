@@ -19,7 +19,7 @@ const buyPremium = function () {
   if (number >= 100) {
     document.querySelector('.premium').style.display = 'none';
     headGold.textContent = 'BUY';
-    money.textContent -= 100;
+    number -= 100;
     alert('you buy premium account');
   } else {
     alert(`you haven't got enough coins`);
@@ -27,7 +27,7 @@ const buyPremium = function () {
 };
 const buyGold = function () {
   if (number >= 50) {
-    money.textContent -= 50;
+    number -= 50;
     document.querySelector('.gold').style.display = 'none';
     alert('you buy gold account');
   } else {
