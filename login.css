@@ -1,0 +1,362 @@
+/* App Fonts */
+/* Normalize Css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0; /* 3 */
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+/* Variables */
+:root {
+  --background-color-body: #3d3838;
+  --box-shadow: 0 0 0.7rem yellow;
+  --text-shadow: 0.125rem 0.125rem 0.9375rem yellow;
+}
+
+/* Start Project */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: black;
+}
+
+.container {
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.form {
+  background-color: var(--background-color-body);
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  width: 21.25rem;
+  padding: 0 2.1875rem;
+}
+.header {
+  text-align: center;
+  color: yellow;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+.label {
+  display: block;
+  margin-bottom: 0.625rem;
+  color: yellow;
+}
+.input {
+  width: 100%;
+  height: 2.1875rem;
+  border-radius: 0.625rem;
+  outline: none;
+  border: none;
+  box-shadow: var(--box-shadow);
+  background-color: transparent;
+  padding-left: 0.3125rem;
+  color: #fff;
+}
+.input::placeholder {
+  color: yellow;
+}
+.wrapper {
+  margin-top: 0.9375rem;
+}
+.btn {
+  width: 100%;
+  height: 2.5rem;
+  display: block;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: var(--box-shadow);
+  color: var(--background-color-body);
+  background-color: yellow;
+  font-weight: bold;
+  margin-top: 2.5rem;
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+}
+/* Project Responsive */
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+  .form {
+    width: 20rem;
+  }
+  .header {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .form {
+    width: 18.5rem;
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .form {
+    width: 17.5rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .form {
+    width: 16.5rem;
+    padding: 0 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .form {
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 324px) {
+  .form {
+    width: 14.5rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .form {
+    width: 14rem;
+  }
+  .input {
+    width: 95%;
+  }
+  .btn {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .form {
+    width: 13rem;
+  }
+}
+@media only screen and (max-width: 260px) {
+  .form {
+    width: 12.5rem;
+  }
+}
+@media only screen and (max-width: 240px) {
+  .form {
+    width: 11.5rem;
+  }
+}

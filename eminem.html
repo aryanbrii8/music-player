@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="eminem.css" />
+    <link rel="icon" href="images/Picsart_25-01-30_12-54-18-224.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <i class="fa-solid fa-arrow-left"></i>
+
+      <div class="music-player">
+        <h2 id="playing-from">0 is playing from 0</h2>
+        <img
+          src="images/eminem/eminem_monster.jpg"
+          alt="img"
+          class="round"
+          id="cover"
+        />
+        <h2 id="music-title">Monster</h2>
+        <h2 id="music-artist">Eminem</h2>
+        <div id="player-progress">
+          <div id="progress"></div>
+          <div class="music-duration">
+            <span id="current-time">00:00</span>
+            <span id="duration">00:00</span>
+          </div>
+        </div>
+        <div class="controls">
+          <i class="fa-solid fa-backward" id="prev"></i>
+          <i class="fa-solid fa-play" id="play"></i>
+          <i class="fa-solid fa-forward" id="next"></i>
+          <i class="fa-solid fa fa-refresh" aria-hidden="true"></i>
+        </div>
+        <div id="wave" class="loader">
+          <span id="stroke"></span>
+          <span id="stroke"></span>
+          <span id="stroke"></span>
+          <span id="stroke"></span>
+          <span id="stroke"></span>
+          <span id="stroke"></span>
+          <span id="stroke"></span>
+        </div>
+      </div>
+    </div>
+    <script src="eminem.js"></script>
+  </body>
+</html>

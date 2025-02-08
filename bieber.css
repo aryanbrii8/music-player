@@ -1,0 +1,538 @@
+/* App Fonts */
+/* Normalize Css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0; /* 3 */
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+/* Variables */
+:root {
+  --box-shadow: 0 0 0.7rem yellow;
+  --text-shadow: 0.125rem 0.125rem 0.9375rem yellow;
+}
+
+/* Start Project */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to top, yellow, gray 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 80rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.music-player {
+  width: 26.875rem;
+  height: 31.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0.1875rem 0.1875rem 0.625rem rgb(26, 26, 26),
+    -0.125rem -0.125rem 0.625rem rgb(26, 26, 26);
+  background: linear-gradient(yellow -20%, gray);
+}
+.back {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 4rem;
+}
+#playing-from {
+  text-align: center;
+  position: relative;
+  right: 0px;
+  left: 0px;
+  top: 1.5625rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+#cover {
+  display: flex;
+  width: 8.4375rem;
+  margin: auto;
+  border-radius: 50%;
+  margin-top: 0.3125rem;
+  position: relative;
+  top: 1.5625rem;
+  border: 0.3125rem solid yellow;
+}
+#music-title {
+  text-align: center;
+  position: relative;
+  top: 1.25rem;
+}
+#music-artist {
+  text-align: center;
+  position: relative;
+  top: 0.9375rem;
+}
+#player-progress {
+  background-color: gray;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  height: 0.375rem;
+  width: 90%;
+  margin: 2.5rem 1.25rem 35px;
+  position: relative;
+  top: 0.625rem;
+}
+#progress {
+  background-color: yellow;
+  border-radius: 0.3125rem;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+  position: absolute;
+}
+#progress::after {
+  content: '';
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  height: 0.75rem;
+  width: 0.75rem;
+  top: -0.1875rem;
+  right: 0px;
+}
+.music-duration {
+  position: relative;
+  top: -1.5625rem;
+  display: flex;
+  justify-content: space-between;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5625rem;
+}
+
+.fa-solid {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  cursor: pointer;
+  background-color: yellow;
+  height: 3.125rem;
+  width: 3.125rem;
+  border-radius: 50%;
+  position: relative;
+  font-size: 1.4375rem !important;
+  transition: all 250ms ease-in;
+}
+.fa-solid:active {
+  transform: scale(0.8);
+}
+.round {
+  animation: round 4s linear infinite 0.5s;
+  animation-play-state: paused;
+}
+
+.loader {
+  position: relative;
+  top: 1.5625rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#stroke {
+  background-color: yellow;
+  height: 150%;
+  width: 0.625rem;
+  border-radius: 3.125rem;
+  margin: 0 0.3125rem;
+  animation: animate 1.5s linear infinite 0.5s;
+  animation-play-state: paused;
+  display: none;
+}
+.fa-arrow-left {
+  position: absolute;
+  left: 1.2rem;
+  top: 1.5rem;
+}
+@keyframes animate {
+  50% {
+    height: 20%;
+    background-color: black;
+  }
+  10% {
+    height: 100%;
+    background-color: black;
+  }
+}
+#stroke:nth-child(1) {
+  animation-delay: 0s;
+}
+#stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
+#stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
+#stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
+#stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
+#stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
+#stroke:nth-child(7) {
+  animation-delay: 0s;
+}
+@keyframes round {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+/* Project Responsive */
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .music-player {
+    width: 25rem;
+    height: 31rem;
+  }
+  #cover {
+    width: 8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .music-player {
+    width: 24.5rem;
+  }
+  #cover {
+    width: 7.5rem;
+  }
+  .fa-solid {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+  .music-player {
+    width: 22rem;
+  }
+  #cover {
+    width: 7rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .music-player {
+    width: 21rem;
+    height: 30rem;
+  }
+  #cover {
+    width: 6.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .music-player {
+    width: 20rem;
+  }
+  #cover {
+    width: 6rem;
+  }
+  .fa-solid {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.2rem !important;
+  }
+}
+@media only screen and (max-width: 385px) {
+  .music-player {
+    width: 18rem;
+    height: 29rem;
+  }
+  .fa-solid {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .controls {
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 355px) {
+  .music-player {
+    width: 17rem;
+  }
+  #stroke {
+    height: 120%;
+  }
+  .loader {
+    height: 2.3rem;
+  }
+  #duration {
+    padding-right: 0.5rem;
+  }
+}
+@media only screen and (max-width: 325px) {
+  .music-player {
+    width: 15.5rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .music-player {
+    height: 26rem;
+  }
+  #playing-from {
+    font-size: 1.2rem;
+  }
+  #cover {
+    width: 5.5rem;
+  }
+  #music-title {
+    top: 1rem;
+    font-size: 1.2rem;
+  }
+  #music-artist {
+    top: 0.2rem;
+    font-size: 1.2rem;
+  }
+  #player-progress {
+    top: 0.2rem;
+  }
+  .controls {
+    margin-top: -10px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .music-player {
+    width: 14.5rem;
+  }
+}
+@media only screen and (max-width: 265px) {
+  .music-player {
+    width: 13.8rem;
+  }
+  #player-progress {
+    margin: 2.5rem 1rem 1rem;
+  }
+  .controls {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 250px) {
+  .music-player {
+    width: 13rem;
+    height: 25rem;
+  }
+
+  .fa-solid {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+}
